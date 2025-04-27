@@ -2,7 +2,7 @@
 A Task Management **RESTful API** developed in **Spring-Boot framework** for managing your tasks.
 
 ### <u>More About The Project</u>
-It is the final project during my **Back-End training** in **ASAL Technologies** company. 
+It is the final project during my **Back-End training** at **ASAL Technologies** company. 
 
 ### <u>Documentation Outline</u>
 * Requirements
