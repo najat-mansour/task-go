@@ -9,6 +9,7 @@ It is the final project during my **Back-End training** at **ASAL Technologies**
 * Database Schema [(Press Here)](https://github.com/najat-mansour/task-go/wiki/Database-Schema)
 * REST API 
     * Authentication [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-%E2%80%90-Authentication)
+    * Users [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-%E2%80%90-Users)
 * Code Architecture [(Press Here)](https://github.com/najat-mansour/task-go/wiki/Code-Architecture)
 * Dependencies 
 
