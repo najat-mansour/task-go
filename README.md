@@ -7,16 +7,19 @@ It is the final project during my **Back-End training** at **ASAL Technologies**
 ### <u>Documentation Outline</u>
 * **Requirements** [(Press Here)](https://github.com/najat-mansour/task-go/wiki/Requirements)
 * **Database Schema** [(Press Here)](https://github.com/najat-mansour/task-go/wiki/Database-Schema)
-* **REST API** 
-    * Authentication [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(1)-%E2%80%90-Authentication)
-    * Users [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(2)-%E2%80%90-Users)
-    * Workspaces [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(3)-%E2%80%90-Workspaces)
-    * Groups [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(4)-%E2%80%90-Groups)
-    * Tasks [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(5)-%E2%80%90-Sub%E2%80%90Tasks)
-    * Sub-Tasks [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(6)-%E2%80%90-Sub%E2%80%90Tasks)
-    * Statistics [(Press Here)](https://github.com/najat-mansour/task-go/wiki/REST-API-(7)-%E2%80%90-Statistics)
 * **Code Architecture** [(Press Here)](https://github.com/najat-mansour/task-go/wiki/Code-Architecture)
-* **Dependencies**
+* **Dependencies** [(Press Here)](https://github.com/najat-mansour/task-go/wiki/Dependencies)
+* **REST API Documentation**
+    | Endpoint       | Documentation Link |
+    |----------------|--------------------|
+    | Authentication | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(1)-%E2%80%90-Authentication) |
+    | Users          | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(2)-%E2%80%90-Users)          |
+    | Workspaces     | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(3)-%E2%80%90-Workspaces)     |
+    | Groups         | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(4)-%E2%80%90-Groups)         |
+    | Tasks          | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(5)-%E2%80%90-Sub%E2%80%90Tasks) |
+    | Sub-Tasks      | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(6)-%E2%80%90-Sub%E2%80%90Tasks) |
+    | Statistics     | [Press Here](https://github.com/najat-mansour/task-go/wiki/REST-API-(7)-%E2%80%90-Statistics)     |
+
 
 ### <u>Prerequisites</u>
 * JDK 21+
