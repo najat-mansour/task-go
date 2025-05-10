@@ -1,6 +1,8 @@
 package com.taskgo.constants;
 
 public class URLs {
+    public static final String GLOBAL_API_PREFIX = "/task-go/v1";
+
     public static final String USERS_PREFIX = "/users";
 
     public static final String USERS_CREATE = "/";
