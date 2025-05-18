@@ -5,7 +5,7 @@
 ### **Endpoint**
 
 ```http
-POST /task-go/v1/users
+POST /task-go/v1/users/
 ```
 
 ### **Request Body**
@@ -141,7 +141,7 @@ PATCH /task-go/v1/users/{id}
 ### **Endpoint**
 
 ```http
-GET /task-go/v1/users
+GET /task-go/v1/users/
 ```
 
 ### **Request Headers**
@@ -157,6 +157,7 @@ GET /task-go/v1/users
 ```json
 [
     {
+      "id": "user-uuid",
       "username": "najat-mansour",
       "firstName": "Najat",
       "lastName": "Mansour",
@@ -169,10 +170,10 @@ GET /task-go/v1/users
         "town": "",
         "street": ""
       },
+      "createdAt": "2025-05-02 18:00:00",
       "app_rate": 5
-    },
-    ...
-]
+    }
+  ]
 ```
 
 #### 🔐 401 Unauthorized
@@ -209,6 +210,7 @@ GET /task-go/v1/users/id/{id}
 
 ```json
 {
+  "id": "user-uuid",
   "username": "najat-mansour",
   "firstName": "Najat",
   "lastName": "Mansour",
@@ -221,6 +223,7 @@ GET /task-go/v1/users/id/{id}
     "town": "",
     "street": ""
   },
+  "createdAt": "2025-05-02 18:00:00",
   "app_rate": 5
 }
 ```
@@ -267,6 +270,7 @@ GET /task-go/v1/users/username/{username}
 
 ```json
 {
+  "id": "user-uuid",
   "username": "najat-mansour",
   "firstName": "Najat",
   "lastName": "Mansour",
@@ -279,6 +283,7 @@ GET /task-go/v1/users/username/{username}
     "town": "",
     "street": ""
   },
+  "createdAt": "2025-05-02 18:00:00",
   "app_rate": 5
 }
 ```
@@ -325,6 +330,7 @@ GET /task-go/v1/users/email/{email}
 
 ```json
 {
+  "id": "user-uuid",
   "username": "najat-mansour",
   "firstName": "Najat",
   "lastName": "Mansour",
@@ -337,6 +343,7 @@ GET /task-go/v1/users/email/{email}
     "town": "",
     "street": ""
   },
+  "createdAt": "2025-05-02 18:00:00",
   "app_rate": 5
 }
 ```

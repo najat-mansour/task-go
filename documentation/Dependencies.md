@@ -12,4 +12,5 @@
 | `spring-boot-starter-actuator` | Provides production-ready features like monitoring and metrics |
 | `spring-boot-starter-log4j2`   | Uses Log4j2 for logging instead of the default Logback         |
 | `jakarta.validation-api`       | Uses the validation annotations                                |
+| `hibernate-validator`          | Uses the validation annotations                                |
 | `spring-boot-starter-security` | Uses the security utilities such as BCrypt                     |

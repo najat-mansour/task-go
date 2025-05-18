@@ -45,5 +45,6 @@ public class UserCreateRequestDTO {
     @NotBlank
     private Gender gender;
 
+    @NotBlank
     private AddressDTO address;
 }

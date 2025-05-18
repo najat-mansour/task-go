@@ -68,7 +68,7 @@ POST /task-go/v1/workspaces/{workspaceId}/groups
 ### **Endpoint**
 
 ```http
-PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
+PATCH /task-go/v1/workspaces/groups/{groupId}
 ```
 
 ### **Request Headers**
@@ -81,7 +81,6 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 
 | Parameter     | Type   | Description           |
 | ------------- | ------ | --------------------- |
-| `workspaceId` | string | UUID of the workspace |
 | `groupId`     | string | UUID of the group     |
 
 ### **Request Body**
@@ -124,7 +123,7 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 
 ```json
 {
-  "error": "Group not found in workspace."
+  "error": "Group not found."
 }
 ```
 
@@ -133,7 +132,7 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 ### **Endpoint**
 
 ```http
-DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
+DELETE /task-go/v1/workspaces/groups/{groupId}
 ```
 
 ### **Request Headers**
@@ -146,7 +145,6 @@ DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 
 | Parameter     | Type   | Description           |
 | ------------- | ------ | --------------------- |
-| `workspaceId` | string | UUID of the workspace |
 | `groupId`     | string | UUID of the group     |
 
 ### **Possible Responses**
@@ -180,7 +178,7 @@ DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 ### **Endpoint**
 
 ```http
-GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
+GET /task-go/v1/workspaces/groups/{groupId}
 ```
 
 ### **Request Headers**
@@ -193,7 +191,6 @@ GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 
 | Parameter     | Type   | Description           |
 | ------------- | ------ | --------------------- |
-| `workspaceId` | string | UUID of the workspace |
 | `groupId`     | string | UUID of the group     |
 
 ### **Possible Responses**
@@ -202,31 +199,38 @@ GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}
 
 ```json
 {
-  "id": "b2e7129b-124f-4e9e-a52c-e1c215ff21a2",
+  "id": "group-uuid",
   "name": "Development Team",
+  "color": "#123456",
   "description": "Handles all development tasks",
-  "createdAt": "2025-04-28T14:00:00",
   "tasks": [
     {
-      "id": "t1",
-      "title": "Setup project",
+      "id": "task-uuid",
+      "name": "Setup project",
       "description": "Initialize Git repo and base structure",
-      "owner": {
-        "id": "u1",
+      "status": "NOT_STARTED",
+      "priority": "HIGH",
+      "isFavorite": false,
+      "startingTimestamp": "2025-05-01T10:00:00",
+      "endingTimestamp": "2025-05-02T18:00:00",
+      "assignedTo": {
+        "id": "user-uuid",
         "username": "najat-mansour",
         "firstName": "Najat",
         "lastName": "Mansour"
       },
       "subtasks": [
         {
-          "id": "st1",
-          "title": "Create GitHub repo",
-          "description": "Set up the GitHub repository"
-        },
-        ...
+          "id": "subtask-uuid",
+          "name": "Create GitHub repo",
+          "description": "Set up the GitHub repository",
+          "status": "NOT_STARTED",
+          "priority": "MEDIUM",
+          "startingTimestamp": "2025-05-01T11:00:00",
+          "endingTimestamp": "2025-05-01T12:00:00"
+        }
       ]
-    },
-    ...
+    }
   ]
 }
 ```
