@@ -11,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -18,7 +19,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 @Builder
-
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -59,4 +59,15 @@ public class User {
     @JsonManagedReference
     private Address address;
 
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Workspace> ownedWorkspaces;
+
+    @OneToMany(mappedBy = "viewer", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<WorkspaceViewer> viewedWorkspaces;
+
+    @OneToMany(mappedBy = "assignedTo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Task> assignedTasks;
 }

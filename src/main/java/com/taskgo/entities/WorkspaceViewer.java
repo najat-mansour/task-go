@@ -8,31 +8,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "addresses")
+@Table(name = "worksapaces_viewers")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
-public class Address {
+public class WorkspaceViewer {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", unique = true, nullable = false)
     private String id;
 
-    @Column(name = "country", nullable = false)
-    private String country;
-
-    @Column(name = "city", nullable = false)
-    private String city;
-
-    @Column(name = "town")
-    private String town;
-
-    @Column(name = "street", nullable = false)
-    private String street;
-
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "workspace_id", nullable = false)
     @JsonBackReference
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private Workspace workspace;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "viewer_id", nullable = false)
+    @JsonBackReference
+    private User viewer;
 }
