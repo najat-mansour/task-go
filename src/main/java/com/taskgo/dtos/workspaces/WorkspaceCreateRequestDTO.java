@@ -1,4 +1,4 @@
-package com.taskgo.dtos.addresses;
+package com.taskgo.dtos.workspaces;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -12,16 +12,13 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @Data
 @Builder
-public class AddressDTO {
+public class WorkspaceCreateRequestDTO {
     @NotBlank
-    private String country;
+    private String name;
 
     @NotBlank
-    private String city;
-
-    // Can be blank
-    private String town;
+    private String description;
 
     @NotBlank
-    private String street;
+    private String ownerId;
 }

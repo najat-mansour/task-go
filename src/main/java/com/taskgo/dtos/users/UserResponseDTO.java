@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Component
 @NoArgsConstructor
@@ -24,5 +25,6 @@ public class UserResponseDTO {
     private LocalDate birthdate;
     private Gender gender;
     private AddressDTO address;
+    private LocalDateTime createdAt;
     private Integer appRate;
 }

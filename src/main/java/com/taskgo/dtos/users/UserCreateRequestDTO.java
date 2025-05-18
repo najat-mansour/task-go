@@ -4,6 +4,7 @@ import com.taskgo.constants.Gender;
 import com.taskgo.dtos.addresses.AddressDTO;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,8 +15,8 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 
 @Component
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Builder
 public class UserCreateRequestDTO {
@@ -24,7 +25,7 @@ public class UserCreateRequestDTO {
 
     @NotBlank
     @Pattern(
-            regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+            regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$",
             message = "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a digit, and a special character."
     )
     private String password;
@@ -39,12 +40,12 @@ public class UserCreateRequestDTO {
     @Email
     private String email;
 
-    @NotBlank
+    @NotNull
     private LocalDate birthdate;
 
-    @NotBlank
+    @NotNull
     private Gender gender;
 
-    @NotBlank
+    @NotNull
     private AddressDTO address;
 }

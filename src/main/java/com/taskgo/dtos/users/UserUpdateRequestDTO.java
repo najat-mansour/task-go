@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @Builder
 public class UserUpdateRequestDTO {
     @Pattern(
-            regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+            regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$",
             message = "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a digit, and a special character."
     )
     private String password;
