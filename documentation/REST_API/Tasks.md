@@ -10,14 +10,14 @@ POST /task-go/v1/workspaces/groups/{groupId}/tasks
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `groupId`     | UUID of the group to be managed     |
+| Parameter | Description                     |
+|-----------|---------------------------------|
+| `groupId` | UUID of the group to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -71,14 +71,14 @@ PATCH /task-go/v1/workspaces/groups/tasks/{taskId}
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -134,14 +134,14 @@ DELETE /task-go/v1/workspaces/groups/tasks/{taskId}
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -180,14 +180,14 @@ GET /task-go/v1/workspaces/groups/tasks/{taskId}
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -209,7 +209,17 @@ GET /task-go/v1/workspaces/groups/tasks/{taskId}
     "username": "najat-mansour",
     "firstName": "Najat",
     "lastName": "Mansour",
-    "image_url": "https://example.com/image.jpg"
+    "email": "mansournajat7@gmail.com",
+    "birthdate": "2003-01-28",
+    "gender": "FEMALE",
+    "address": {
+      "country": "Palestine",
+      "city": "Nablus",
+      "town": "",
+      "street": ""
+    },
+    "createdAt": "2025-05-02T18:00:00",
+    "app_rate": 5
   },
   "subtasks": [
     {

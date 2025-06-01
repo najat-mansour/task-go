@@ -11,13 +11,13 @@ POST /task-go/v1/workspaces/{workspaceId}/groups
 ### **Request Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
 | Parameter     | Type   | Description           |
-| ------------- | ------ | --------------------- |
+|---------------|--------|-----------------------|
 | `workspaceId` | string | UUID of the workspace |
 
 ### **Request Body**
@@ -74,14 +74,14 @@ PATCH /task-go/v1/workspaces/groups/{groupId}
 ### **Request Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
-| Parameter     | Type   | Description           |
-| ------------- | ------ | --------------------- |
-| `groupId`     | string | UUID of the group     |
+| Parameter | Type   | Description       |
+|-----------|--------|-------------------|
+| `groupId` | string | UUID of the group |
 
 ### **Request Body**
 
@@ -138,14 +138,14 @@ DELETE /task-go/v1/workspaces/groups/{groupId}
 ### **Request Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
-| Parameter     | Type   | Description           |
-| ------------- | ------ | --------------------- |
-| `groupId`     | string | UUID of the group     |
+| Parameter | Type   | Description       |
+|-----------|--------|-------------------|
+| `groupId` | string | UUID of the group |
 
 ### **Possible Responses**
 
@@ -184,14 +184,14 @@ GET /task-go/v1/workspaces/groups/{groupId}
 ### **Request Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
-| Parameter     | Type   | Description           |
-| ------------- | ------ | --------------------- |
-| `groupId`     | string | UUID of the group     |
+| Parameter | Type   | Description       |
+|-----------|--------|-------------------|
+| `groupId` | string | UUID of the group |
 
 ### **Possible Responses**
 
@@ -217,7 +217,18 @@ GET /task-go/v1/workspaces/groups/{groupId}
         "id": "user-uuid",
         "username": "najat-mansour",
         "firstName": "Najat",
-        "lastName": "Mansour"
+        "lastName": "Mansour",
+        "email": "mansournajat7@gmail.com",
+        "birthdate": "2003-01-28",
+        "gender": "FEMALE",
+        "address": {
+          "country": "Palestine",
+          "city": "Nablus",
+          "town": "",
+          "street": ""
+        },
+        "createdAt": "2025-05-02T18:00:00",
+        "app_rate": 5
       },
       "subtasks": [
         {

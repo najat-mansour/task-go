@@ -11,7 +11,7 @@ POST /task-go/v1/workspaces/
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -61,13 +61,13 @@ PATCH /task-go/v1/workspaces/{workspaceId}
 ### **Path Parameter**
 
 | Parameter     | Description                     |
-| ------------- | ------------------------------- |
+|---------------|---------------------------------|
 | `workspaceId` | UUID of the workspace to update |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -106,24 +106,24 @@ PATCH /task-go/v1/workspaces/{workspaceId}
 }
 ```
 
-## <mark>Get All Workspaces for a User</mark>
+## <mark>Get All Workspaces for an Owner</mark>
 
 ### **Endpoint**
 
 ```http
-GET /task-go/v1/users/{userId}/workspaces/
+GET /task-go/v1/users/workspaces/owner/{ownerId}
 ```
 
 ### **Path Parameter**
 
 | Parameter | Description      |
-| --------- | ---------------- |
-| `userId`  | UUID of the user |
+|-----------|------------------|
+| `ownerId` | UUID of the user |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -140,7 +140,18 @@ GET /task-go/v1/users/{userId}/workspaces/
       "id": "user-uuid",
       "username": "najat-mansour",
       "firstName": "Najat",
-      "lastName": "Mansour"
+      "lastName": "Mansour",
+      "email": "mansournajat7@gmail.com",
+      "birthdate": "2003-01-28",
+      "gender": "FEMALE",
+      "address": {
+        "country": "Palestine",
+        "city": "Nablus",
+        "town": "",
+        "street": ""
+      },
+      "createdAt": "2025-05-02T18:00:00",
+      "app_rate": 5
     }
   ],
   "groups": [
@@ -163,7 +174,18 @@ GET /task-go/v1/users/{userId}/workspaces/
             "id": "user-uuid",
             "username": "najat-mansour",
             "firstName": "Najat",
-            "lastName": "Mansour"
+            "lastName": "Mansour",
+            "email": "mansournajat7@gmail.com",
+            "birthdate": "2003-01-28",
+            "gender": "FEMALE",
+            "address": {
+              "country": "Palestine",
+              "city": "Nablus",
+              "town": "",
+              "street": ""
+            },
+            "createdAt": "2025-05-02T18:00:00",
+            "app_rate": 5
           },
           "subtasks": [
             {
@@ -191,11 +213,142 @@ GET /task-go/v1/users/{userId}/workspaces/
 }
 ```
 
-#### ❌ 404 Not Found
+#### ❌ 404 Not Found - User
 
 ```json
 {
   "error": "User not found."
+}
+```
+
+#### ❌ 404 Not Found - Workspaces
+
+```json
+{
+  "error": "No workspaces found for this user."
+}
+```
+
+## <mark>Get All Workspaces for a Viewer</mark>
+
+### **Endpoint**
+
+```http
+GET /task-go/v1/users/workspaces/viewer/{viewerId}
+```
+
+### **Path Parameter**
+
+| Parameter  | Description      |
+|------------|------------------|
+| `viewerId` | UUID of the user |
+
+### **Headers**
+
+| Header        | Value          |
+|---------------|----------------|
+| Authorization | Bearer `{JWT}` |
+
+### **Responses**
+
+#### ✅ 200 OK
+
+```json
+{
+  "id": "workspace-uuid",
+  "name": "My Workspace",
+  "description": "This is my main project workspace.",
+  "viewers": [
+    {
+      "id": "user-uuid",
+      "username": "najat-mansour",
+      "firstName": "Najat",
+      "lastName": "Mansour",
+      "email": "mansournajat7@gmail.com",
+      "birthdate": "2003-01-28",
+      "gender": "FEMALE",
+      "address": {
+        "country": "Palestine",
+        "city": "Nablus",
+        "town": "",
+        "street": ""
+      },
+      "createdAt": "2025-05-02T18:00:00",
+      "app_rate": 5
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-uuid",
+      "name": "Development Team",
+      "color": "#123456",
+      "description": "Handles all development tasks",
+      "tasks": [
+        {
+          "id": "task-uuid",
+          "name": "Setup project",
+          "description": "Initialize Git repo and base structure",
+          "status": "NOT_STARTED",
+          "priority": "HIGH",
+          "startingTimestamp": "2025-05-01T10:00:00",
+          "endingTimestamp": "2025-05-02T18:00:00",
+          "isFavorite": false,
+          "assignedTo": {
+            "id": "user-uuid",
+            "username": "najat-mansour",
+            "firstName": "Najat",
+            "lastName": "Mansour",
+            "email": "mansournajat7@gmail.com",
+            "birthdate": "2003-01-28",
+            "gender": "FEMALE",
+            "address": {
+              "country": "Palestine",
+              "city": "Nablus",
+              "town": "",
+              "street": ""
+            },
+            "createdAt": "2025-05-02T18:00:00",
+            "app_rate": 5
+          },
+          "subtasks": [
+            {
+              "id": "subtask-uuid",
+              "name": "Create GitHub repo",
+              "description": "Set up the GitHub repository",
+              "status": "NOT_STARTED",
+              "priority": "MEDIUM",
+              "startingTimestamp": "2025-05-01T11:00:00",
+              "endingTimestamp": "2025-05-01T12:00:00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### 🔐 401 Unauthorized
+
+```json
+{
+  "error": "Unauthorized. Token missing or invalid."
+}
+```
+
+#### ❌ 404 Not Found - User
+
+```json
+{
+  "error": "User not found."
+}
+```
+
+#### ❌ 404 Not Found - Workspaces
+
+```json
+{
+  "error": "No workspaces found for this user."
 }
 ```
 
@@ -210,13 +363,13 @@ GET /task-go/v1/workspaces/{workspaceId}
 ### **Path Parameter**
 
 | Parameter     | Description           |
-| ------------- | --------------------- |
+|---------------|-----------------------|
 | `workspaceId` | UUID of the workspace |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -256,7 +409,18 @@ GET /task-go/v1/workspaces/{workspaceId}
             "id": "user-uuid",
             "username": "najat-mansour",
             "firstName": "Najat",
-            "lastName": "Mansour"
+            "lastName": "Mansour",
+            "email": "mansournajat7@gmail.com",
+            "birthdate": "2003-01-28",
+            "gender": "FEMALE",
+            "address": {
+              "country": "Palestine",
+              "city": "Nablus",
+              "town": "",
+              "street": ""
+            },
+            "createdAt": "2025-05-02T18:00:00",
+            "app_rate": 5
           },
           "subtasks": [
             {
@@ -304,13 +468,13 @@ DELETE /task-go/v1/workspaces/{workspaceId}
 ### **Path Parameter**
 
 | Parameter     | Description           |
-| ------------- | --------------------- |
+|---------------|-----------------------|
 | `workspaceId` | UUID of the workspace |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -350,13 +514,13 @@ POST /task-go/v1/workspaces/{workspaceId}/viewers
 ### **Path Parameter**
 
 | Parameter     | Description           |
-| ------------- | --------------------- |
+|---------------|-----------------------|
 | `workspaceId` | UUID of the workspace |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -427,7 +591,7 @@ DELETE /task-go/v1/workspaces/{workspaceId}/viewers/{viewerId}
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**

@@ -10,15 +10,15 @@ POST /task-go/v1/workspaces/groups/tasks/{taskId}/subtasks
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -70,14 +70,14 @@ PATCH /task-go/v1/workspaces/groups/tasks/subtasks/{subtaskId}
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `subtaskId`   | UUID of the sub-task to be managed  |
+| Parameter   | Description                        |
+|-------------|------------------------------------|
+| `subtaskId` | UUID of the sub-task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -130,14 +130,14 @@ DELETE /task-go/v1/workspaces/groups/tasks/subtasks/{subtaskId}
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `subtaskId`   | UUID of the sub-task to be managed  |
+| Parameter   | Description                        |
+|-------------|------------------------------------|
+| `subtaskId` | UUID of the sub-task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -176,14 +176,14 @@ GET /task-go/v1/workspaces/groups/tasks/subtasks/{subtaskId}
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `subtaskId`   | UUID of the sub-task to be managed  |
+| Parameter   | Description                        |
+|-------------|------------------------------------|
+| `subtaskId` | UUID of the sub-task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
