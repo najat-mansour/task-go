@@ -18,8 +18,8 @@ public class SwaggerConfig {
                         .version("1.0.0")
                         .description("API documentation for TaskGo application")
                         .contact(new Contact()
-                                .name("Mohammad Alawneh")
-                                .email("mo.a.alawneh@gmail.com"))
+                                .name("Najat Mansour")
+                                .email("mansournajat7@gmail.com"))
                         .license(new License()
                                 .name("Apache 2.0")
                                 .url("https://springdoc.org")));
