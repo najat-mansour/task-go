@@ -35,7 +35,7 @@ public class Workspace {
 
     @OneToMany(mappedBy = "workspace", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private List<WorkspaceViewer> contributors;
+    private List<WorkspaceViewer> viewers;
 
     @OneToMany(mappedBy = "workspace", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
