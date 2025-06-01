@@ -1,6 +1,7 @@
 package com.taskgo.mappers;
 
 import com.taskgo.dtos.groups.GroupCreateRequestDTO;
+import com.taskgo.dtos.groups.GroupResponseDTO;
 import com.taskgo.dtos.groups.GroupUpdateRequestDTO;
 import com.taskgo.entities.Group;
 import org.mapstruct.Mapper;
@@ -10,4 +11,6 @@ public interface GroupMapper {
     Group toEntity(GroupCreateRequestDTO groupCreateRequestDTO);
 
     Group toEntity(GroupUpdateRequestDTO groupUpdateRequestDTO);
+
+    GroupResponseDTO toResponseDTO(Group group);
 }

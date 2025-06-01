@@ -1,6 +1,7 @@
 package com.taskgo.mappers;
 
 import com.taskgo.dtos.tasks.TaskCreateRequestDTO;
+import com.taskgo.dtos.tasks.TaskResponseDTO;
 import com.taskgo.dtos.tasks.TaskUpdateRequestDTO;
 import com.taskgo.entities.Task;
 import org.mapstruct.Mapper;
@@ -10,4 +11,6 @@ public interface TaskMapper {
     Task toEntity(TaskCreateRequestDTO taskCreateRequestDTO);
 
     Task toEntity(TaskUpdateRequestDTO taskUpdateRequestDTO);
+
+    TaskResponseDTO toResponseDTO(Task task);
 }
