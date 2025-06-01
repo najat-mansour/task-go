@@ -1,5 +1,6 @@
 package com.taskgo.dtos.general;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,5 +13,6 @@ import org.springframework.stereotype.Component;
 @Data
 @Builder
 public class MessageResponseDTO {
+    @NotBlank
     private String message;
 }

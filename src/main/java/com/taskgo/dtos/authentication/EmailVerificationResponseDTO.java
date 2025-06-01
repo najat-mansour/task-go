@@ -1,4 +1,4 @@
-package com.taskgo.dtos.groups;
+package com.taskgo.dtos.authentication;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,8 +11,6 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @Data
 @Builder
-public class GroupUpdateRequestDTO {
-    private String name;
-    private String color;
-    private String description;
+public class EmailVerificationResponseDTO {
+    private String code;
 }

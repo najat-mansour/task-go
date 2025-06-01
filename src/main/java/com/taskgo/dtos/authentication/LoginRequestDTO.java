@@ -1,7 +1,6 @@
-package com.taskgo.dtos.groups;
+package com.taskgo.dtos.authentication;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -10,9 +9,7 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
-public class GroupUpdateRequestDTO {
-    private String name;
-    private String color;
-    private String description;
+public class LoginRequestDTO {
+    private String username;
+    private String password;
 }

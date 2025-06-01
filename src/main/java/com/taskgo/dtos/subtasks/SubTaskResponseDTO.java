@@ -1,4 +1,4 @@
-package com.taskgo.dtos.tasks;
+package com.taskgo.dtos.subtasks;
 
 import com.taskgo.constants.Priority;
 import com.taskgo.constants.Status;
@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Component
@@ -15,13 +16,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 @Builder
-public class TaskUpdateRequestDTO {
+public class SubTaskResponseDTO implements Serializable {
+    private String id;
     private String name;
     private String description;
     private Status status;
     private Priority priority;
     private LocalDateTime startingTimestamp;
     private LocalDateTime endingTimestamp;
-    private Boolean isFavorite;
-    private String assignedToId;
 }
