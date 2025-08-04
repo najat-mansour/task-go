@@ -40,16 +40,14 @@ POST /task-go/v1/auth/login
 ### **Endpoint**
 
 ```http
-POST /task-go/v1/auth/email-verification
+GET /task-go/v1/auth/email-verification/{email}
 ```
 
-### **Request Body**
+### **Path Parameters**
 
-```json
-{
-  "email": "mansournajat7@gmail.com"
-}
-```
+| Parameter | Type   | Description            |
+|-----------|--------|------------------------|
+| `email`   | string | The email of the user. |
 
 ### **Possible Responses**
 
@@ -74,16 +72,14 @@ POST /task-go/v1/auth/email-verification
 ### **Endpoint**
 
 ```http
-POST /task-go/v1/auth/forgot-password
+GET /task-go/v1/auth/new-password/{username}
 ```
 
-### **Request Body**
+### **Path Parameters**
 
-```json
-{
-  "username": "najat-mansour"
-}
-```
+| Parameter  | Type   | Description               |
+|------------|--------|---------------------------|
+| `username` | string | The username of the user. |
 
 ### **Possible Responses**
 

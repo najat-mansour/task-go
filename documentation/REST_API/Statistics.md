@@ -5,19 +5,19 @@
 ### **Endpoint**
 
 ```http
-GET /api/statistics/{userId}
+GET /task-go/v1/statistics/{userId}
 ```
 
 ### **Request Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
-| Parameter | Type   | Description                     |
-| --------- | ------ | ------------------------------- |
+| Parameter | Type   | Description                                  |
+|-----------|--------|----------------------------------------------|
 | `userId`  | string | UUID of the user to retrieve statistics for. |
 
 ### **Possible Responses**
@@ -26,16 +26,17 @@ GET /api/statistics/{userId}
 
 ```json
 {
-  "workspaces": [
-    {
-      "workspaceId": "string",
-      "workspaceName": "string",
-      "memberCount": "number"
-    }
-  ],
-  "invitedWorkspacesCount": "number",
-  "createdTasksCount": "number",
-  "assignedTasksCount": "number"
+  "workspaces": {
+    "ownedCount": 5,
+    "viewedCount": 3
+  },
+  "assignedTasks": {
+    "notStarted": 3,
+    "inProgress": 2,
+    "pending": 0,
+    "finished": 2,
+    "total": 7
+  }
 }
 ```
 

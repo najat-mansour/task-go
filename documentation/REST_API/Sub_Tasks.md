@@ -5,22 +5,20 @@
 ### **Endpoint**
 
 ```http
-POST /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtasks
+POST /task-go/v1/workspaces/groups/tasks/{taskId}/subtasks
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -31,8 +29,8 @@ POST /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtas
   "description": "Set up the GitHub repository",
   "status": "NOT_STARTED",
   "priority": "MEDIUM",
-  "starting_timestamp": "2025-05-01T11:00:00",
-  "ending_timestamp": "2025-05-01T12:00:00"
+  "startingTimestamp": "2025-05-01T11:00:00",
+  "endingTimestamp": "2025-05-01T12:00:00"
 }
 ```
 
@@ -67,22 +65,19 @@ POST /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtas
 ### **Endpoint**
 
 ```http
-PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtasks/{subtaskId}
+PATCH /task-go/v1/workspaces/groups/tasks/subtasks/{subtaskId}
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
-| `subtaskId`   | UUID of the sub-task to be managed  |
+| Parameter   | Description                        |
+|-------------|------------------------------------|
+| `subtaskId` | UUID of the sub-task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -93,8 +88,8 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subta
   "description": "Updated sub-task description.",
   "status": "IN_PROGRESS",
   "priority": "HIGH",
-  "starting_timestamp": "2025-05-01T12:30:00",
-  "ending_timestamp": "2025-05-01T13:30:00"
+  "startingTimestamp": "2025-05-01T12:30:00",
+  "endingTimestamp": "2025-05-01T13:30:00"
 }
 ```
 > Fields are optional. Send only what needs to be updated.
@@ -105,13 +100,7 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subta
 
 ```json
 {
-  "id": "subtask-uuid",
-  "name": "Updated Sub-Task Name",
-  "description": "Updated sub-task description.",
-  "status": "IN_PROGRESS",
-  "priority": "HIGH",
-  "starting_timestamp": "2025-05-01T12:30:00",
-  "ending_timestamp": "2025-05-01T13:30:00"
+  "message": "Sub-task updated successfully."
 }
 ```
 
@@ -136,22 +125,19 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subta
 ### **Endpoint**
 
 ```http
-DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtasks/{subtaskId}
+DELETE /task-go/v1/workspaces/groups/tasks/subtasks/{subtaskId}
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
-| `subtaskId`   | UUID of the sub-task to be managed  |
+| Parameter   | Description                        |
+|-------------|------------------------------------|
+| `subtaskId` | UUID of the sub-task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -185,22 +171,19 @@ DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subt
 ### **Endpoint**
 
 ```http
-GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtasks/{subtaskId}
+GET /task-go/v1/workspaces/groups/tasks/subtasks/{subtaskId}
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
-| `subtaskId`   | UUID of the sub-task to be managed  |
+| Parameter   | Description                        |
+|-------------|------------------------------------|
+| `subtaskId` | UUID of the sub-task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -214,8 +197,8 @@ GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}/subtask
   "description": "Set up the GitHub repository",
   "status": "NOT_STARTED",
   "priority": "MEDIUM",
-  "starting_timestamp": "2025-05-01T11:00:00",
-  "ending_timestamp": "2025-05-01T12:00:00"
+  "startingTimestamp": "2025-05-01T11:00:00",
+  "endingTimestamp": "2025-05-01T12:00:00"
 }
 ```
 

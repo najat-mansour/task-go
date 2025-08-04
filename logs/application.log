@@ -1,0 +1,192 @@
+2025-05-10T18:34:28.214+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Starting TaskGoApplication using Java 21.0.6 with PID 13500 (C:\Users\hp\Desktop\task-go\target\classes started by hp in C:\Users\hp\Desktop\task-go)
+2025-05-10T18:34:28.222+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T18:34:28.266+03:00  INFO 13500 --- [task-go] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-10T18:34:28.266+03:00  INFO 13500 --- [task-go] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-10T18:34:29.035+03:00  INFO 13500 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T18:34:29.051+03:00  INFO 13500 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-05-10T18:34:29.599+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-10T18:34:29.620+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-10T18:34:29.621+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T18:34:29.660+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-10T18:34:29.661+03:00  INFO 13500 --- [task-go] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1394 ms
+2025-05-10T18:34:29.983+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T18:34:30.027+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-10T18:34:30.056+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-10T18:34:30.350+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T18:34:30.389+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-05-10T18:34:30.572+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27bc4e73
+2025-05-10T18:34:30.573+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-05-10T18:34:30.632+03:00  WARN 13500 --- [task-go] [restartedMain] o.h.d.Dialect                            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-10T18:34:30.653+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T18:34:31.365+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T18:34:31.814+03:00  INFO 13500 --- [task-go] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T18:34:31.881+03:00  WARN 13500 --- [task-go] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T18:34:31.965+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-10T18:34:32.588+03:00  WARN 13500 --- [task-go] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a742de31-6ff8-40fb-8764-436c61d21327
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-10T18:34:32.606+03:00  INFO 13500 --- [task-go] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-10T18:34:32.714+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoints beneath base path '/actuator'
+2025-05-10T18:34:32.866+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-10T18:34:32.925+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-10T18:34:32.933+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Started TaskGoApplication in 5.287 seconds (process running for 6.958)
+2025-05-10T18:34:33.251+03:00  INFO 13500 --- [task-go] [RMI TCP Connection(3)-192.168.1.103] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-10T18:34:33.252+03:00  INFO 13500 --- [task-go] [RMI TCP Connection(3)-192.168.1.103] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-05-10T18:34:33.255+03:00  INFO 13500 --- [task-go] [RMI TCP Connection(3)-192.168.1.103] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2025-05-10T18:34:55.911+03:00  INFO 13500 --- [task-go] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 4 deletions, 1 modification)
+2025-05-10T18:34:55.917+03:00  INFO 13500 --- [task-go] [Thread-5] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T18:34:55.936+03:00  INFO 13500 --- [task-go] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-05-10T18:34:55.946+03:00  INFO 13500 --- [task-go] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T18:34:55.950+03:00  INFO 13500 --- [task-go] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-05-10T18:34:55.961+03:00  INFO 13500 --- [task-go] [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-05-10T18:34:56.076+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Starting TaskGoApplication using Java 21.0.6 with PID 13500 (C:\Users\hp\Desktop\task-go\target\classes started by hp in C:\Users\hp\Desktop\task-go)
+2025-05-10T18:34:56.077+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T18:34:56.559+03:00  INFO 13500 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T18:34:56.561+03:00  INFO 13500 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2025-05-10T18:34:56.814+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-10T18:34:56.818+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-10T18:34:56.819+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T18:34:56.836+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-10T18:34:56.837+03:00  INFO 13500 --- [task-go] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 758 ms
+2025-05-10T18:34:57.012+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T18:34:57.014+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-10T18:34:57.024+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T18:34:57.025+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2025-05-10T18:34:57.028+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@725a0901
+2025-05-10T18:34:57.028+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2025-05-10T18:34:57.031+03:00  WARN 13500 --- [task-go] [restartedMain] o.h.d.Dialect                            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-10T18:34:57.032+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T18:34:57.052+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T18:34:57.052+03:00  INFO 13500 --- [task-go] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T18:34:57.110+03:00  WARN 13500 --- [task-go] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T18:34:57.175+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-10T18:34:57.709+03:00  WARN 13500 --- [task-go] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f8a42c74-a7fb-4b5c-ba9c-3b559302549a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-10T18:34:57.711+03:00  INFO 13500 --- [task-go] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-10T18:34:57.768+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoints beneath base path '/actuator'
+2025-05-10T18:34:57.902+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-10T18:34:57.937+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-10T18:34:57.944+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Started TaskGoApplication in 1.923 seconds (process running for 31.968)
+2025-05-10T18:34:57.947+03:00  INFO 13500 --- [task-go] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T18:34:59.330+03:00  INFO 13500 --- [task-go] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2025-05-10T18:34:59.334+03:00  INFO 13500 --- [task-go] [Thread-7] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T18:34:59.355+03:00  INFO 13500 --- [task-go] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-05-10T18:34:59.367+03:00  INFO 13500 --- [task-go] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T18:34:59.368+03:00  INFO 13500 --- [task-go] [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown initiated...
+2025-05-10T18:34:59.372+03:00  INFO 13500 --- [task-go] [Thread-7] c.z.h.HikariDataSource                   : HikariPool-2 - Shutdown completed.
+2025-05-10T18:34:59.554+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Starting TaskGoApplication using Java 21.0.6 with PID 13500 (C:\Users\hp\Desktop\task-go\target\classes started by hp in C:\Users\hp\Desktop\task-go)
+2025-05-10T18:34:59.556+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T18:35:00.246+03:00  INFO 13500 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T18:35:00.252+03:00  INFO 13500 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-05-10T18:35:00.710+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-10T18:35:00.713+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-10T18:35:00.714+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T18:35:00.763+03:00  INFO 13500 --- [task-go] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-10T18:35:00.763+03:00  INFO 13500 --- [task-go] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1200 ms
+2025-05-10T18:35:01.060+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T18:35:01.063+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-10T18:35:01.078+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T18:35:01.079+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Starting...
+2025-05-10T18:35:01.087+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5402c64
+2025-05-10T18:35:01.087+03:00  INFO 13500 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-3 - Start completed.
+2025-05-10T18:35:01.089+03:00  WARN 13500 --- [task-go] [restartedMain] o.h.d.Dialect                            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-10T18:35:01.090+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T18:35:01.171+03:00  INFO 13500 --- [task-go] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T18:35:01.205+03:00  INFO 13500 --- [task-go] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T18:35:01.265+03:00  WARN 13500 --- [task-go] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T18:35:01.391+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-10T18:35:01.871+03:00  WARN 13500 --- [task-go] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 87dcb6f0-408b-4f70-8e9f-493114c9d7fc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-10T18:35:01.873+03:00  INFO 13500 --- [task-go] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-10T18:35:01.909+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoints beneath base path '/actuator'
+2025-05-10T18:35:02.044+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-10T18:35:02.068+03:00  INFO 13500 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-10T18:35:02.075+03:00  INFO 13500 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Started TaskGoApplication in 2.62 seconds (process running for 36.099)
+2025-05-10T18:35:02.078+03:00  INFO 13500 --- [task-go] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T18:35:42.405+03:00  INFO 13500 --- [task-go] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T18:35:42.420+03:00  INFO 13500 --- [task-go] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-05-10T18:35:42.423+03:00  INFO 13500 --- [task-go] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T18:35:42.424+03:00  INFO 13500 --- [task-go] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown initiated...
+2025-05-10T18:35:42.426+03:00  INFO 13500 --- [task-go] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-3 - Shutdown completed.
+2025-05-10T19:06:32.675+03:00  INFO 2672 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Starting TaskGoApplication using Java 21.0.6 with PID 2672 (C:\Users\hp\Desktop\task-go\target\classes started by hp in C:\Users\hp\Desktop\task-go)
+2025-05-10T19:06:32.684+03:00  INFO 2672 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T19:06:32.734+03:00  INFO 2672 --- [task-go] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-10T19:06:32.734+03:00  INFO 2672 --- [task-go] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-10T19:06:33.618+03:00  INFO 2672 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T19:06:33.635+03:00  INFO 2672 --- [task-go] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2025-05-10T19:06:34.241+03:00  INFO 2672 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-05-10T19:06:34.263+03:00  INFO 2672 --- [task-go] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-05-10T19:06:34.263+03:00  INFO 2672 --- [task-go] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T19:06:34.304+03:00  INFO 2672 --- [task-go] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-05-10T19:06:34.304+03:00  INFO 2672 --- [task-go] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
+2025-05-10T19:06:34.620+03:00  INFO 2672 --- [task-go] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T19:06:34.663+03:00  INFO 2672 --- [task-go] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-10T19:06:34.689+03:00  INFO 2672 --- [task-go] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-05-10T19:06:34.925+03:00  INFO 2672 --- [task-go] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T19:06:34.952+03:00  INFO 2672 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-05-10T19:06:35.082+03:00  INFO 2672 --- [task-go] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7269ee43
+2025-05-10T19:06:35.084+03:00  INFO 2672 --- [task-go] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-05-10T19:06:35.126+03:00  WARN 2672 --- [task-go] [restartedMain] o.h.d.Dialect                            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-10T19:06:35.151+03:00  INFO 2672 --- [task-go] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T19:06:36.021+03:00  INFO 2672 --- [task-go] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T19:06:36.630+03:00  INFO 2672 --- [task-go] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T19:06:36.713+03:00  WARN 2672 --- [task-go] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T19:06:36.809+03:00  INFO 2672 --- [task-go] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-10T19:06:37.586+03:00  WARN 2672 --- [task-go] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c21a4958-0f6a-46b1-968d-f2239ae72a1c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-10T19:06:37.606+03:00  INFO 2672 --- [task-go] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-10T19:06:37.741+03:00  INFO 2672 --- [task-go] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoints beneath base path '/actuator'
+2025-05-10T19:06:37.955+03:00  INFO 2672 --- [task-go] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-10T19:06:38.038+03:00  INFO 2672 --- [task-go] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-05-10T19:06:38.055+03:00  INFO 2672 --- [task-go] [restartedMain] c.t.TaskGoApplication                    : Started TaskGoApplication in 5.862 seconds (process running for 7.298)
+2025-05-10T19:06:38.713+03:00  INFO 2672 --- [task-go] [RMI TCP Connection(3)-192.168.1.103] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-10T19:06:38.714+03:00  INFO 2672 --- [task-go] [RMI TCP Connection(3)-192.168.1.103] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-05-10T19:06:38.716+03:00  INFO 2672 --- [task-go] [RMI TCP Connection(3)-192.168.1.103] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2025-05-10T19:07:30.864+03:00  INFO 2672 --- [task-go] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T19:07:30.878+03:00  INFO 2672 --- [task-go] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-05-10T19:07:30.892+03:00  INFO 2672 --- [task-go] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T19:07:30.896+03:00  INFO 2672 --- [task-go] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-05-10T19:07:30.905+03:00  INFO 2672 --- [task-go] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

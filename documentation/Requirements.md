@@ -13,7 +13,7 @@
 * image 
 
 **NOTEs:** 
-* The system generates an **UUID** for each user.
+* The system generates a **UUID** for each user.
 * Both **username** and **email** must be unique. 
 * The system records the **creation date** for each user account. 
 * The **password** must be at least <u>8-characters</u> and contains at least <u>one capital-letter</u>, <u>one small-letter</u>, <u>one digit</u> and <u>one special character</u>. 
@@ -23,7 +23,7 @@
 * The **user images** will be stored either in a <u>folder in the server side</u> or on a <u>cloud service such as AWS S3</u>. 
 
 ### <u>Login</u> 
-**The user can login using his/her credentials:**
+**The user can log in using his/her credentials:**
 * username
 * password
 
@@ -44,7 +44,7 @@
 * description 
 
 **NOTEs:**
-* The system generates an **UUID** for each workspace. 
+* The system generates a **UUID** for each workspace. 
 * The user can edit, delete and filter based on any field his/her workspaces. 
 * The user can add other users to a workspace.
 
@@ -55,7 +55,7 @@
 * description 
 
 **NOTEs:**
-* The system generates an **UUID** for each group of tasks. 
+* The system generates a **UUID** for each group of tasks. 
 * The user can edit, delete and filter based on any field his/her groups of tasks. 
 
 ### <u>Tasks</u>
@@ -70,7 +70,7 @@
 * owner: the user who is selected to do the task
 
 **NOTEs:**
-* The system generates an **UUID** for each task. 
+* The system generates a **UUID** for each task. 
 * The user can add any task to the favorite ones. 
 * The user can edit, delete and filter based on any field his/her tasks. 
 
@@ -85,7 +85,7 @@
 * task 
 
 **NOTEs:**
-* The system generates an **UUID** for each sub-task. 
+* The system generates a **UUID** for each sub-task. 
 * The user can edit, delete and filter based on any field his/her sub-tasks. 
 
 <img 
@@ -102,5 +102,8 @@
 * The user can get a statistics about his/her usage such as: 
     * Number of workspaces he/she created as well as joined to.
     * Number of tasks he/she created or assigned to.
-* Adding logging messages in both the terminal and a log file. 
+* Adding logging messages using `Log4j2` in a `LoggingAspect` in both the terminal and a log file. 
 * Enable all the actuators.
+* Add OpenAPI / Swagger API Documentation.
+* Add Caching using `Redis`. 
+* Add UnitTesting for all `utilities`, `reporsitories`, `services` and `controllers`.

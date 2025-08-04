@@ -5,7 +5,7 @@
 ### **Endpoint**
 
 ```http
-POST /task-go/v1/users
+POST /task-go/v1/users/
 ```
 
 ### **Request Body**
@@ -62,16 +62,16 @@ POST /task-go/v1/users
 PATCH /task-go/v1/users/{id}
 ```
 
-### **Request Headers**
+### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
-| Authorization | Bearer `<JWT>` |
+|---------------|----------------|
+| Authorization | Bearer `{JWT}` |
 
 ### **Path Parameters**
 
 | Parameter | Type   | Description                     |
-| --------- | ------ | ------------------------------- |
+|-----------|--------|---------------------------------|
 | `id`      | string | UUID of the user to be updated. |
 
 ### **Request Body**
@@ -92,6 +92,7 @@ PATCH /task-go/v1/users/{id}
   "app_rate": 5
 }
 ```
+
 > All fields are optional.
 
 ### **Possible Responses**
@@ -128,7 +129,7 @@ PATCH /task-go/v1/users/{id}
 }
 ```
 
-#### 🚫 404 Not Found
+#### ❌ 404 Not Found
 
 ```json
 {
@@ -141,13 +142,13 @@ PATCH /task-go/v1/users/{id}
 ### **Endpoint**
 
 ```http
-GET /task-go/v1/users
+GET /task-go/v1/users/
 ```
 
-### **Request Headers**
+### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Possible Responses**
@@ -156,22 +157,23 @@ GET /task-go/v1/users
 
 ```json
 [
-    {
-      "username": "najat-mansour",
-      "firstName": "Najat",
-      "lastName": "Mansour",
-      "email": "mansournajat7@gmail.com",
-      "birthdate": "2003-01-28",
-      "gender": "FEMALE",
-      "address": {
-        "country": "Palestine",
-        "city": "Nablus",
-        "town": "",
-        "street": ""
-      },
-      "app_rate": 5
+  {
+    "id": "user-uuid",
+    "username": "najat-mansour",
+    "firstName": "Najat",
+    "lastName": "Mansour",
+    "email": "mansournajat7@gmail.com",
+    "birthdate": "2003-01-28",
+    "gender": "FEMALE",
+    "address": {
+      "country": "Palestine",
+      "city": "Nablus",
+      "town": "",
+      "street": ""
     },
-    ...
+    "createdAt": "2025-05-02T18:00:00",
+    "app_rate": 5
+  }
 ]
 ```
 
@@ -183,6 +185,14 @@ GET /task-go/v1/users
 }
 ```
 
+#### ❌ 404 Not Found
+
+```json
+{
+  "error": "No users found."
+}
+```
+
 ## <mark>Get User by ID</mark>
 
 ### **Endpoint**
@@ -191,16 +201,16 @@ GET /task-go/v1/users
 GET /task-go/v1/users/id/{id}
 ```
 
-### **Request Headers**
+### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
 | Parameter | Type   | Description       |
-|-----------| ------ | ----------------- |
+|-----------|--------|-------------------|
 | `id`      | string | UUID of the user. |
 
 ### **Possible Responses**
@@ -209,6 +219,7 @@ GET /task-go/v1/users/id/{id}
 
 ```json
 {
+  "id": "user-uuid",
   "username": "najat-mansour",
   "firstName": "Najat",
   "lastName": "Mansour",
@@ -221,6 +232,7 @@ GET /task-go/v1/users/id/{id}
     "town": "",
     "street": ""
   },
+  "createdAt": "2025-05-02T18:00:00",
   "app_rate": 5
 }
 ```
@@ -249,16 +261,16 @@ GET /task-go/v1/users/id/{id}
 GET /task-go/v1/users/username/{username}
 ```
 
-### **Request Headers**
+### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
 | Parameter  | Type   | Description                   |
-| ---------- | ------ | ----------------------------- |
+|------------|--------|-------------------------------|
 | `username` | string | Username of the user to find. |
 
 ### **Possible Responses**
@@ -267,6 +279,7 @@ GET /task-go/v1/users/username/{username}
 
 ```json
 {
+  "id": "user-uuid",
   "username": "najat-mansour",
   "firstName": "Najat",
   "lastName": "Mansour",
@@ -279,6 +292,7 @@ GET /task-go/v1/users/username/{username}
     "town": "",
     "street": ""
   },
+  "createdAt": "2025-05-02T18:00:00",
   "app_rate": 5
 }
 ```
@@ -307,16 +321,16 @@ GET /task-go/v1/users/username/{username}
 GET /task-go/v1/users/email/{email}
 ```
 
-### **Request Headers**
+### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `<JWT>` |
 
 ### **Path Parameters**
 
 | Parameter | Type   | Description        |
-| --------- | ------ | ------------------ |
+|-----------|--------|--------------------|
 | `email`   | string | Email of the user. |
 
 ### **Possible Responses**
@@ -325,6 +339,7 @@ GET /task-go/v1/users/email/{email}
 
 ```json
 {
+  "id": "user-uuid",
   "username": "najat-mansour",
   "firstName": "Najat",
   "lastName": "Mansour",
@@ -337,6 +352,7 @@ GET /task-go/v1/users/email/{email}
     "town": "",
     "street": ""
   },
+  "createdAt": "2025-05-02T18:00:00",
   "app_rate": 5
 }
 ```

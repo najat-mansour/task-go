@@ -5,20 +5,19 @@
 ### **Endpoint**
 
 ```http
-POST /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks
+POST /task-go/v1/workspaces/groups/{groupId}/tasks
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
+| Parameter | Description                     |
+|-----------|---------------------------------|
+| `groupId` | UUID of the group to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -29,9 +28,10 @@ POST /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks
   "description": "Initialize Git repo and base structure",
   "status": "NOT_STARTED",
   "priority": "HIGH",
-  "starting_timestamp": "2025-05-01T10:00:00",
-  "ending_timestamp": "2025-05-02T18:00:00",
-  "ownerId": "user-uuid"
+  "startingTimestamp": "2025-05-01T10:00:00",
+  "endingTimestamp": "2025-05-02T18:00:00",
+  "isFavorite": false,
+  "assignedToId": "user-uuid"
 }
 ```
 
@@ -66,21 +66,19 @@ POST /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks
 ### **Endpoint**
 
 ```http
-PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
+PATCH /task-go/v1/workspaces/groups/tasks/{taskId}
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Request Body**
@@ -91,8 +89,10 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
   "description": "Updated task description.",
   "status": "IN_PROGRESS",
   "priority": "MEDIUM",
-  "starting_timestamp": "2025-05-01T12:00:00",
-  "ending_timestamp": "2025-05-02T20:00:00"
+  "startingTimestamp": "2025-05-01T12:00:00",
+  "endingTimestamp": "2025-05-02T20:00:00",
+  "isFavorite": true,
+  "assignedToId": "user-uuid"
 }
 ```
 > Fields are optional. Send only what needs to be updated.
@@ -103,14 +103,9 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
 
 ```json
 {
-  "id": "task-uuid",
-  "name": "Updated Task Name",
-  "description": "Updated task description.",
-  "status": "IN_PROGRESS",
-  "priority": "MEDIUM",
-  "starting_timestamp": "2025-05-01T12:00:00",
-  "ending_timestamp": "2025-05-02T20:00:00"
+  "message": "Task updated successfully."
 }
+```
 ```
 
 #### 🔐 401 Unauthorized
@@ -134,21 +129,19 @@ PATCH /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
 ### **Endpoint**
 
 ```http
-DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
+DELETE /task-go/v1/workspaces/groups/tasks/{taskId}
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -182,21 +175,19 @@ DELETE /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
 ### **Endpoint**
 
 ```http
-GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
+GET /task-go/v1/workspaces/groups/tasks/{taskId}
 ```
 
 ### **Path Parameters**
 
-| Parameter     | Description                         |
-| ------------- | ----------------------------------- |
-| `workspaceId` | UUID of the workspace to be managed |
-| `groupId`     | UUID of the group to be managed     |
-| `taskId`      | UUID of the task to be managed      |
+| Parameter | Description                    |
+|-----------|--------------------------------|
+| `taskId`  | UUID of the task to be managed |
 
 ### **Headers**
 
 | Header        | Value          |
-| ------------- | -------------- |
+|---------------|----------------|
 | Authorization | Bearer `{JWT}` |
 
 ### **Responses**
@@ -210,14 +201,25 @@ GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
   "description": "Initialize Git repo and base structure",
   "status": "NOT_STARTED",
   "priority": "HIGH",
-  "starting_timestamp": "2025-05-01T10:00:00",
-  "ending_timestamp": "2025-05-02T18:00:00",
-  "owner": {
+  "isFavorite": false,
+  "startingTimestamp": "2025-05-01T10:00:00",
+  "endingTimestamp": "2025-05-02T18:00:00",
+  "assignedTo": {
     "id": "user-uuid",
     "username": "najat-mansour",
     "firstName": "Najat",
     "lastName": "Mansour",
-    "image_url": "https://example.com/image.jpg"
+    "email": "mansournajat7@gmail.com",
+    "birthdate": "2003-01-28",
+    "gender": "FEMALE",
+    "address": {
+      "country": "Palestine",
+      "city": "Nablus",
+      "town": "",
+      "street": ""
+    },
+    "createdAt": "2025-05-02T18:00:00",
+    "app_rate": 5
   },
   "subtasks": [
     {
@@ -226,8 +228,8 @@ GET /task-go/v1/workspaces/{workspaceId}/groups/{groupId}/tasks/{taskId}
       "description": "Set up the GitHub repository",
       "status": "NOT_STARTED",
       "priority": "MEDIUM",
-      "starting_timestamp": "2025-05-01T11:00:00",
-      "ending_timestamp": "2025-05-01T12:00:00"
+      "startingTimestamp": "2025-05-01T11:00:00",
+      "endingTimestamp": "2025-05-01T12:00:00"
     }
   ]
 }
